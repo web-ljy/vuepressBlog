@@ -72,11 +72,16 @@ module.exports = {
     sidebarDepth: 2,                 // 侧边栏显示2级
     lastUpdated: '上次更新时间',      // 由于 lastUpdated 是基于 git 的, 所以你只能在一个基于 git 的项目中启用它。
     search: true,                    // 禁用或者开启内置搜索框，默认为true  
-    searchMaxSuggestions: 10         // 默认是5    
+    //searchMaxSuggestions: 10         // 默认是5    
   },
-  plugins: {
-    '@vuepress/search': true,
-    '@vuepress/last-updated': true, // 文章的末尾会自动显示文章的更新日期
-    '@vuepress/back-to-top': true,  // 回到顶部
-  }
+  plugins: [
+    ['@vuepress/search', {
+      searchMaxSuggestions: 1
+    }]
+  ]
+  // plugins: {
+  //   '@vuepress/search': true,
+  //   '@vuepress/last-updated': true, // 文章的末尾会自动显示文章的更新日期
+  //   '@vuepress/back-to-top': true,  // 回到顶部
+  // }
 };
