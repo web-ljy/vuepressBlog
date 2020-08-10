@@ -33,7 +33,7 @@ module.exports = {
           title: 'CSS',
           collapsable: true, 
           children: [
-            { title: "margin 负值", path: '/guide/CSS/postB-1/' },
+            { title: "margin", path: '/guide/CSS/postB-1/' },
             { title: "三角形", path: '/guide/CSS/postB-2/' },
           ]
         },
@@ -47,23 +47,6 @@ module.exports = {
         },
       ]
     }, 
-    footer: {
-      // gitbutton  配置
-      gitbtn: {
-        // 仓库地址
-        repository: "https://ghbtns.com/github-btn.html?user=youdeliang&repo=vuepress-theme-top&type=star&count=true",
-        frameborder: 0,
-        scrolling: 0,
-        width: "80px",
-        height: "20px"
-      },
-      // 添加自定义 footer
-      custom: `Copyright &copy; Top Blog 2020 <br /> 
-        Theme By <a href="VuePress 中文文档 | VuePress 中文网" target="_blank">VuePress</a>
-        | <a href="youdeliang - Overview" target="_blank">youdeliang</a>`,
-      // spin: true,
-      // theme: 'filled'
-    },
     // 分页配置
     pagination: {
       // 每页文章数量
@@ -76,12 +59,8 @@ module.exports = {
   },
   plugins: [
     ['@vuepress/search', {
-      searchMaxSuggestions: 1
-    }]
+      searchMaxSuggestions: 10
+    }],
+    ['@vuepress/back-to-top']
   ]
-  // plugins: {
-  //   '@vuepress/search': true,
-  //   '@vuepress/last-updated': true, // 文章的末尾会自动显示文章的更新日期
-  //   '@vuepress/back-to-top': true,  // 回到顶部
-  // }
 };
